@@ -185,12 +185,13 @@ This section is organized by the stage of the authentication flow where issues t
 
 **Possible Causes & Solutions:**
 
-| Cause                                    | How to Verify                                                | Solution                                                                           |
-| ---------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| ICM trust parameters not set             | RZ10 → Check profile parameters                              | Add `icm/HTTPS/trust_client_with_issuer` and `icm/HTTPS/trust_client_with_subject` |
-| Parameter values don't match certificate | Compare RZ10 values with Cloud Connector certificate details | Copy exact Issuer and Subject DN from Cloud Connector system certificate           |
-| ICM not restarted                        | Check SMICM parameter display                                | Restart ICM via SMICM → Administration → ICM → Exit Hard → Global                  |
-| Profile not activated                    | RZ10 → Check profile status                                  | Save and activate profile, then restart ICM                                        |
+| Cause                                                  | How to Verify                                                                                                                                                                     | Solution                                                                           |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ICM trust parameters not set                           | RZ10 → Check profile parameters                                                                                                                                                   | Add `icm/HTTPS/trust_client_with_issuer` and `icm/HTTPS/trust_client_with_subject` |
+| Parameter values don't match certificate               | Compare RZ10 values with Cloud Connector certificate details                                                                                                                      | Copy exact Issuer and Subject DN from Cloud Connector system certificate           |
+| ICM not restarted                                      | Check SMICM parameter display                                                                                                                                                     | Restart ICM via SMICM → Administration → ICM → Exit Hard → Global                  |
+| Profile not activated                                  | RZ10 → Check profile status                                                                                                                                                       | Save and activate profile, then restart ICM                                        |
+| Principal user is mapped to more than one user in SU01 | Check certrule with a test certificate from cloud connector to see if the certificate resolves to a user. If it results in ambiguous user - that means the user is double mapped. | Remove duplicate mapping from SU01                                                 |
 
 **Diagnostic Steps:**
 
