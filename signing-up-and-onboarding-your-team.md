@@ -25,10 +25,12 @@ After signing in:
 3. Enter the email address of the colleague you want to invite
 4. Assign a role to each user:
 
-| Role          | Permissions                                                                                                                                      |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Admin**     | Full administrative access, including the ability to connect Azure tenant, deploy Teams app, manage users, and configure workflows               |
-| **Developer** | Access to build and manage workflows, adaptive cards, and test integrations. No access to Azure tenant connection or organization-wide settings. |
+| Role                              | Permissions                                                                                                                                      |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Admin**                         | Full administrative access, including the ability to connect Azure tenant, deploy Teams app, manage users, and configure workflows               |
+| **Developer**                     | Access to build and manage workflows, adaptive cards, and test integrations. No access to Azure tenant connection or organization-wide settings. |
+| **Looply Workflow Administrator** | Access to view the dashboard and workflow history, stop/terminate live workflow executions and use Lifecycle Management to bulk-delete messages  |
+| **Auditor**                       | Access to view the dashboard and workflow history                                                                                                |
 
 5. Click **Send Invite** to complete the invitation process
 
